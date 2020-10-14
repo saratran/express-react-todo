@@ -11,9 +11,11 @@ const body_parser_1 = __importDefault(require("body-parser"));
 // Using an array as mock database
 exports.todoListDb = [];
 const app = express_1.default();
+// Specifying localhost port
 const PORT = process.env.PORT || 4000;
+// Applying middleware
 app.use(cors_1.default());
-app.use(body_parser_1.default.json());
+app.use(body_parser_1.default.json()); // To parse json body in HTTP request
 app.use(body_parser_1.default.urlencoded({ extended: false }));
 // Telling express to use todoRoutes as the router
 app.use(routes_1.default);

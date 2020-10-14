@@ -1,10 +1,11 @@
-/**
- * TODO: create a Todo class that has 3 attributes:
- *      name: string,
- *      description: string,
- *      status: boolean
- */
+export class Todo {
+  name: string;
+  description: string;
+  status: boolean;
 
- export class Todo {
-     
- }
+  constructor(name: string, description: string, status: boolean) {
+    this.name = name;
+    this.description = description;
+    this.status = status;
+  }
+}

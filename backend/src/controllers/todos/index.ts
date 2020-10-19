@@ -8,7 +8,7 @@ const getTodos = (req: Request, res: Response) => {
 };
 
 const addTodo = (req: Request, res: Response) => {
-  const body = req.body as Pick<Todo, "name" | "description" | "status">;
+  const body = req.body;
 
   const newTodo: Todo = new Todo(body.name, body.description, body.status);
   todoListDb.push(newTodo);
